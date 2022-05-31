@@ -245,7 +245,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140469130}
   m_LocalRotation: {x: -0.128259, y: 0.91878206, z: -0.32135397, w: 0.19005509}
-  m_LocalPosition: {x: 2.44, y: 139.74, z: -198.64}
+  m_LocalPosition: {x: 2.51, y: 139.65, z: -198.76}
   m_LocalScale: {x: 3.6298804, y: 1, z: 0.9772802}
   m_Children: []
   m_Father: {fileID: 1720342766}
@@ -435,7 +435,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515723564}
   m_LocalRotation: {x: 0.262689, y: -0.04122056, z: 0.17222878, w: 0.9484897}
-  m_LocalPosition: {x: 8.85, y: 167.68, z: -180.95}
+  m_LocalPosition: {x: 8.86, y: 167.36, z: -180.41}
   m_LocalScale: {x: 0.29038, y: 6.6629596, z: 1.0098084}
   m_Children: []
   m_Father: {fileID: 633351165}
@@ -1282,6 +1282,7 @@ GameObject:
   - component: {fileID: 788950654}
   - component: {fileID: 788950653}
   - component: {fileID: 788950656}
+  - component: {fileID: 788950657}
   m_Layer: 0
   m_Name: Bola
   m_TagString: Untagged
@@ -1381,6 +1382,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &788950657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788950651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dd3981b71b7fa498be945ba6429476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &829419459
 GameObject:
   m_ObjectHideFlags: 0
