@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -230,8 +230,11 @@ GameObject:
   - component: {fileID: 140469134}
   - component: {fileID: 140469133}
   - component: {fileID: 140469132}
+  - component: {fileID: 140469136}
+  - component: {fileID: 140469135}
+  - component: {fileID: 140469137}
   m_Layer: 0
-  m_Name: AuxiliarDireito2 (1)
+  m_Name: GatilhoDireito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,7 +248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140469130}
   m_LocalRotation: {x: -0.128259, y: 0.91878206, z: -0.32135397, w: 0.19005509}
-  m_LocalPosition: {x: 2.51, y: 139.65, z: -198.76}
+  m_LocalPosition: {x: 2.17, y: 139.75, z: -199.04}
   m_LocalScale: {x: 3.6298804, y: 1, z: 0.9772802}
   m_Children: []
   m_Father: {fileID: 1720342766}
@@ -262,8 +265,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9568858, y: 0.81855977, z: 0.85092086}
+  m_Center: {x: 0.021557659, y: 0.09072018, z: 0.07454023}
 --- !u!23 &140469133
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -313,6 +316,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140469130}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!59 &140469135
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140469130}
+  m_ConnectedBody: {fileID: 0}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: -0.5, y: -0.23, z: 0.22}
+  m_Axis: {x: -0.11, y: 0.8, z: 0.01}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 3.0730362, y: 140.10803, z: -198.5638}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 1
+  m_Limits:
+    min: -30.503767
+    max: 79.26666
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &140469136
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140469130}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
+--- !u!114 &140469137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140469130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec1476adbf476544b321bab66f1e0b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descanso: 0
+  pressionado: 70
+  hitStrenght: 10000
+  flipperDamper: 150
+  inputName: GatilhoDireito
 --- !u!1 &388644138
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,8 +587,11 @@ GameObject:
   - component: {fileID: 527623665}
   - component: {fileID: 527623664}
   - component: {fileID: 527623663}
+  - component: {fileID: 527623666}
+  - component: {fileID: 527623668}
+  - component: {fileID: 527623667}
   m_Layer: 0
-  m_Name: AuxiliarEsquerdo2 (1)
+  m_Name: GatilhoEsquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -530,7 +605,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527623661}
   m_LocalRotation: {x: 0.27008384, y: 0.09131448, z: -0.21810032, w: 0.9333535}
-  m_LocalPosition: {x: -2.64, y: 139.69, z: -198.59}
+  m_LocalPosition: {x: -2.22, y: 139.64, z: -198.92}
   m_LocalScale: {x: 3.62988, y: 1, z: 0.97728}
   m_Children: []
   m_Father: {fileID: 1720342766}
@@ -547,8 +622,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.85230976, y: 0.66802305, z: 0.8285368}
+  m_Center: {x: -0.010100055, y: -0.04935875, z: -0.08573448}
 --- !u!23 &527623664
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -598,6 +673,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527623661}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &527623666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527623661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec1476adbf476544b321bab66f1e0b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descanso: 0
+  pressionado: -45
+  hitStrenght: 10000
+  flipperDamper: 150
+  inputName: GatilhoEsquerdo
+--- !u!59 &527623667
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527623661}
+  m_ConnectedBody: {fileID: 0}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: -0.46, y: 0.15, z: 0}
+  m_Axis: {x: -18.16, y: -1.77, z: -100.41}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -4.474579, y: 140.35129, z: -198.36902}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 1
+  m_Limits:
+    min: -104.59624
+    max: 18.20665
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &527623668
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527623661}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
 --- !u!1 &545788888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,6 +1538,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00dd3981b71b7fa498be945ba6429476, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  strenght: 1000
+  STRENGHT_LIMIT: 2300
+  startGame: 1
 --- !u!1 &829419459
 GameObject:
   m_ObjectHideFlags: 0
