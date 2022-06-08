@@ -28,7 +28,6 @@ public class TelaGameOver : MonoBehaviour
         }
 
         if(bola.GetComponent<DisparoBola>().QtdBolinha==0 && !gameOver){
-            Debug.Log(bola.GetComponent<DisparoBola>().QtdBolinha);
             gameOver = !gameOver;
         }
 

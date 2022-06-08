@@ -10,6 +10,7 @@ public class DisparoBola : MonoBehaviour
     public Vector3 startPosition;
     public bool startGame = true;
     public int QtdBolinha = 3;
+    public int pontuacao = 0;
 
     // Start is called before the first frame update
     void Start()
