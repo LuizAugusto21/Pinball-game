@@ -9,6 +9,7 @@ public class DisparoBola : MonoBehaviour
     public float STRENGHT_LIMIT = 2300f;
     public Vector3 startPosition;
     public bool startGame = true;
+    public int QtdBolinha = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class DisparoBola : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        if(startPosition == new Vector3(9.01f, 141.84f, -197.12f)){
+        if(transform.position == startPosition){
             startGame = true;
         }
         if (startGame && Input.GetKey(KeyCode.Space))
