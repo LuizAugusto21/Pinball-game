@@ -7,18 +7,22 @@ public class DisparoBola : MonoBehaviour
     Rigidbody rb;
     public float strenght = 1000f;
     public float STRENGHT_LIMIT = 2300f;
-
+    public Vector3 startPosition;
     public bool startGame = true;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        startPosition = new Vector3(9.01f, 141.84f, -197.12f);
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        if(startPosition == new Vector3(9.01f, 141.84f, -197.12f)){
+            startGame = true;
+        }
         if (startGame && Input.GetKey(KeyCode.Space))
         {
             //Debug.Log(strenght);
