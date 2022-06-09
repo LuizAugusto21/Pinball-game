@@ -5,6 +5,7 @@ using UnityEngine;
 public class PontosCubo : MonoBehaviour
 {
     public GameObject ScriptScore;
+    public GameObject ScriptBolinha;
 
     void OnCollisionEnter(Collision objeto){
 
@@ -13,6 +14,6 @@ public class PontosCubo : MonoBehaviour
 
         //Impulsona a bolinha pra cima ao toca no objeto
         Vector3 vector = new Vector3(0.0f, 1.0f, 1.0f);
-        ScriptScore.GetComponent<Rigidbody>().AddForce(1000*vector);
+        ScriptBolinha.GetComponent<Rigidbody>().AddForce(1000*vector);
     }
 }
