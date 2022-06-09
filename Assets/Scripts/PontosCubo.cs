@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PontosCubo : MonoBehaviour
 {
-    public GameObject ScriptBolinha;
+    public GameObject ScriptScore;
 
     void OnCollisionEnter(Collision objeto){
 
-        ScriptBolinha.GetComponent<DisparoBola>().pontuacao+=200;
-        Debug.Log(ScriptBolinha.GetComponent<DisparoBola>().pontuacao);
+        ScriptScore.GetComponent<AtualizaScore>().score+=200;
+        Debug.Log(ScriptScore.GetComponent<AtualizaScore>().score);
 
         //Impulsona a bolinha pra cima ao toca no objeto
         Vector3 vector = new Vector3(0.0f, 1.0f, 1.0f);
-        ScriptBolinha.GetComponent<Rigidbody>().AddForce(1000*vector);
+        ScriptScore.GetComponent<Rigidbody>().AddForce(1000*vector);
     }
 }

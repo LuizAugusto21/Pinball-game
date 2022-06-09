@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PontosCapsula : MonoBehaviour
 {
-    public GameObject ScriptBolinha;
+    public GameObject ScriptScore;
 
     void OnCollisionEnter(Collision objeto){
 
-        ScriptBolinha.GetComponent<DisparoBola>().pontuacao+=500;
-        Debug.Log(ScriptBolinha.GetComponent<DisparoBola>().pontuacao);
+        ScriptScore.GetComponent<AtualizaScore>().score+=500;
+        Debug.Log(ScriptScore.GetComponent<AtualizaScore>().score);
 
     }
 }

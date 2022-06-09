@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PontosCilindros : MonoBehaviour
 {
-    public GameObject ScriptBolinha;
+    public GameObject ScriptScore;
 
     void OnCollisionEnter(Collision objeto){
 
-        ScriptBolinha.GetComponent<DisparoBola>().pontuacao+=100;
-        Debug.Log(ScriptBolinha.GetComponent<DisparoBola>().pontuacao);
+        ScriptScore.GetComponent<AtualizaScore>().score+=100;
+        Debug.Log(ScriptScore.GetComponent<AtualizaScore>().score);
     }
 }
