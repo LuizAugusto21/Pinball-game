@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PontosCilindros : MonoBehaviour
 {
-    // Start is called before the first frame update
-     public GameObject ScriptBolinha;
+    public GameObject ScriptBolinha;
 
     void OnCollisionEnter(Collision objeto){
 
