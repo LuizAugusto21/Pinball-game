@@ -6,7 +6,7 @@ public class TelaGameOver : MonoBehaviour
 {
 
     public RectTransform PanelGameOver;
-    public static bool gameOver;
+    public bool gameOver;
     public GameObject ScriptDisparo;
 
     public Vector3 emcima, centroDaTela;
@@ -22,13 +22,17 @@ public class TelaGameOver : MonoBehaviour
     {
         if(!gameOver){
             PanelGameOver.position = emcima;
+            Time.timeScale =1;
         }
         else{
-            PanelGameOver.position = Vector3.Lerp(PanelGameOver.position, centroDaTela, Time.deltaTime*10);
+            PanelGameOver.position = centroDaTela;
+            //PanelGameOver.position = Vector3.Lerp(PanelGameOver.position, centroDaTela, Time.deltaTime*10);
+            Time.timeScale =0;
         }
 
         if(ScriptDisparo.GetComponent<DisparoBola>().QtdBolinha==0 && !gameOver){
             gameOver = !gameOver;
+
         }
 
     }

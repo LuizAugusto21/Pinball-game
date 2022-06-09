@@ -13,7 +13,8 @@ public class PontosCubo : MonoBehaviour
         Debug.Log(ScriptScore.GetComponent<AtualizaScore>().score);
 
         //Impulsona a bolinha pra cima ao toca no objeto
-        Vector3 vector = new Vector3(0.0f, 1.0f, 1.0f);
+        //Vector3 vector = new Vector3(0.0f, 1.0f, 1.0f);
+        Vector3 vector = transform.up;
         ScriptBolinha.GetComponent<Rigidbody>().AddForce(1000*vector);
     }
 }
