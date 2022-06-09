@@ -4,44 +4,54 @@ using UnityEngine;
 
 public class DisparoBola : MonoBehaviour
 {
-    Rigidbody rb;
-    public float strenght = 1000f;
-    public float STRENGHT_LIMIT = 2300f;
-    public Vector3 startPosition;
-    public bool startGame = true;
+    /* Rigidbody rb; */
+    public GameObject Bolinha;
+    public float increasedStrength = 50f;
+    public float currentStrenght = 0f;
+    public float STRENGHT_MIN = 500f;
+    public float STRENGHT_LIMIT = 3000f;
+    public bool canPush = false;
     public int QtdBolinha = 3;
-    public int pontuacao = 0;
+
+    void OnCollisionEnter()
+    {
+        canPush = true;
+    }
+
+    void OnCollisionExit()
+    {
+        canPush = false;
+
+        currentStrenght = 0f;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        startPosition = new Vector3(9.01f, 141.84f, -197.12f);
+        currentStrenght = STRENGHT_MIN;
     }
 
     // Update is called once per frame
     void Update()
-    {   
-        if(transform.position == startPosition){
-            startGame = true;
-        }
-        if (startGame && Input.GetKey(KeyCode.Space))
+    {
+        if (canPush && Input.GetKey(KeyCode.Space))
         {
-            //Debug.Log(strenght);
-
-            if (strenght < STRENGHT_LIMIT)
+            if (currentStrenght < STRENGHT_LIMIT)
             {
-                strenght += 10;
+                currentStrenght += increasedStrength;
             }
         }
 
-        if (startGame && Input.GetKeyUp(KeyCode.Space))
+        if (canPush && Input.GetKeyUp(KeyCode.Space))
         {
+            if (currentStrenght < STRENGHT_MIN)
+            {
+                currentStrenght = STRENGHT_MIN;
+            }
+
             Vector3 vector = new Vector3(0.0f, 1.0f, 1.0f);
 
-            rb.AddForce(vector * strenght);
-
-            startGame = false;
+            Bolinha.GetComponent<Rigidbody>().AddForce(vector * currentStrenght);
         }
     }
 }

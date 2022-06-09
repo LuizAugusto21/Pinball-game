@@ -7,7 +7,7 @@ public class TelaGameOver : MonoBehaviour
 
     public RectTransform PanelGameOver;
     public static bool gameOver;
-    public GameObject bola;
+    public GameObject ScriptDisparo;
 
     public Vector3 emcima, centroDaTela;
     // Start is called before the first frame update
@@ -27,7 +27,7 @@ public class TelaGameOver : MonoBehaviour
             PanelGameOver.position = Vector3.Lerp(PanelGameOver.position, centroDaTela, Time.deltaTime*10);
         }
 
-        if(bola.GetComponent<DisparoBola>().QtdBolinha==0 && !gameOver){
+        if(ScriptDisparo.GetComponent<DisparoBola>().QtdBolinha==0 && !gameOver){
             gameOver = !gameOver;
         }
 
